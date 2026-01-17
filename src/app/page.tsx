@@ -7,7 +7,8 @@ import Calendar from "@/components/Calendar";
 import Tasks from "@/components/Tasks";
 import SpotifyPlayer from "@/components/SpotifyPlayer";
 import SystemStatus from "@/components/SystemStatus";
-import { Terminal, Zap } from "lucide-react";
+import { Terminal, Zap, Gamepad2 } from "lucide-react";
+import Link from "next/link";
 
 export default function Dashboard() {
   return (
@@ -78,8 +79,30 @@ export default function Dashboard() {
           <SpotifyPlayer />
         </div>
 
-        {/* Tasks - full width on mobile, 2 cols on larger */}
-        <div className="md:col-span-2 lg:col-span-4 min-h-[300px]">
+        {/* Arcade Link */}
+        <Link href="/game" className="md:col-span-1 lg:col-span-2">
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="widget-card glow-border p-6 h-full flex flex-col items-center justify-center gap-4 cursor-pointer hover:border-[var(--accent-magenta)] transition-colors"
+          >
+            <Gamepad2 className="w-12 h-12 text-[var(--accent-magenta)]" />
+            <div className="text-center">
+              <h3
+                className="text-xl font-bold text-[var(--accent-cyan)]"
+                style={{ fontFamily: "Orbitron, sans-serif" }}
+              >
+                SPACE INVADERS
+              </h3>
+              <p className="text-sm text-[var(--text-muted)] mt-1">
+                Click to play the arcade game
+              </p>
+            </div>
+          </motion.div>
+        </Link>
+
+        {/* Tasks */}
+        <div className="md:col-span-1 lg:col-span-2 min-h-[300px]">
           <Tasks />
         </div>
       </div>
