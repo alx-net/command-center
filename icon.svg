@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="64" fill="#0a0a0f"/>
+  <rect x="32" y="32" width="448" height="448" rx="48" fill="none" stroke="#00f0ff" stroke-width="4" opacity="0.5"/>
+  <text x="256" y="200" text-anchor="middle" font-family="monospace" font-size="64" font-weight="bold" fill="#00f0ff">⌘</text>
+  <text x="256" y="320" text-anchor="middle" font-family="monospace" font-size="48" font-weight="bold" fill="#ff00aa">CMD</text>
+  <text x="256" y="380" text-anchor="middle" font-family="monospace" font-size="32" fill="#8888aa">CENTER</text>
+</svg>
